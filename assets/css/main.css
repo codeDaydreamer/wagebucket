@@ -21,7 +21,7 @@
     --card: #111111;
     --card-border: #1e293b;
   }
-  html { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+  html { font-family: 'Plus Jakarta Sans', sans-serif; scroll-behavior: smooth; }
   body { background-color: var(--bg); color: var(--text); transition: background-color 0.3s, color 0.3s; }
 }
 

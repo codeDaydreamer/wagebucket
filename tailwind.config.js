@@ -12,8 +12,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        mono: ['JetBrains Mono', 'monospace'],
+        sans: ['Plus Jakarta Sans', 'sans-serif'],
+        mono: ['DM Mono', 'monospace'],
       },
       colors: {
         accent: {

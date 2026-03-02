@@ -3,8 +3,8 @@
     :class="plan.highlighted ? 'border-accent-600 shadow-lg shadow-accent-600/10' : ''"
     :style="plan.highlighted ? 'background-color: var(--card);' : 'background-color: var(--card); border-color: var(--card-border);'">
     <!-- Popular badge -->
-    <div v-if="plan.highlighted" class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-accent-600 text-white text-xs font-semibold mb-4 self-start">
-      ⭐ Most Popular
+    <div v-if="plan.highlighted" class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-accent-600 text-white text-xs font-semibold mb-4 self-start">
+      <i class="mdi mdi-check-decagram text-sm"></i> Most Popular
     </div>
     <h3 class="text-lg font-bold mb-1" style="color: var(--text);">{{ plan.name }}</h3>
     <p class="text-xs mb-5" style="color: var(--text-muted);">{{ plan.description }}</p>

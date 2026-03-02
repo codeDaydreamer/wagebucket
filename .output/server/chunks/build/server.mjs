@@ -409,7 +409,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import('./index-D24KozAp.mjs')
+    component: () => import('./index-DQOqOchW.mjs')
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -828,7 +828,7 @@ const plugins = [
   plugin_server_9Ca9_HhnjAGwBWpwAydRauMHxWoxTDY60BrArRnXN_A
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import('./default-BAIsvMVJ.mjs').then((m) => m.default || m))
+  default: defineAsyncComponent(() => import('./default-2G4GKqoN.mjs').then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({

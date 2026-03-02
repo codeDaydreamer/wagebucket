@@ -401,7 +401,7 @@ const _routes = [
   {
     name: "index",
     path: "/",
-    component: () => import("./_nuxt/index-D24KozAp.js")
+    component: () => import("./_nuxt/index-DQOqOchW.js")
   }
 ];
 const _wrapInTransition = (props, children) => {
@@ -820,7 +820,7 @@ const plugins = [
   plugin_server_9Ca9_HhnjAGwBWpwAydRauMHxWoxTDY60BrArRnXN_A
 ];
 const layouts = {
-  default: defineAsyncComponent(() => import("./_nuxt/default-BAIsvMVJ.js").then((m) => m.default || m))
+  default: defineAsyncComponent(() => import("./_nuxt/default-2G4GKqoN.js").then((m) => m.default || m))
 };
 const routeRulesMatcher = _routeRulesMatcher;
 const LayoutLoader = defineComponent({

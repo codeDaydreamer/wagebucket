@@ -1,8 +1,8 @@
 <template>
-  <div class="inline-flex items-center gap-2 flex-shrink-0">
-    <span class="text-lg">{{ icon }}</span>
+  <div class="inline-flex items-center gap-2.5 flex-shrink-0">
+    <i :class="`mdi ${icon} text-base text-accent-500`"></i>
     <span class="text-sm font-medium" style="color: var(--text-muted);">{{ label }}</span>
-    <span class="text-slate-400 mx-2">·</span>
+    <span class="mx-3" style="color: var(--border);">|</span>
   </div>
 </template>
 <script setup lang="ts">

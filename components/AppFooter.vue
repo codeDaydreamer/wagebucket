@@ -11,7 +11,7 @@
             <span class="font-bold text-lg" style="color: var(--text);">WageBucket</span>
           </div>
           <p class="text-sm leading-relaxed mb-5 max-w-xs" style="color: var(--text-muted);">
-            Kenya's smart payroll platform. Automate PAYE, NSSF, NHIF, and Housing Levy — built for Kenyan businesses.
+            Kenya's smart payroll platform. Automate PAYE, NSSF, NHIF and Housing Levy. Built for Kenyan businesses.
           </p>
           <!-- 816 Dynamics credit -->
           <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs border" style="border-color: var(--border); color: var(--text-muted);">

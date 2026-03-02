@@ -1,338 +1,412 @@
 <template>
   <div>
-    <!-- ── HERO ── -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+
+    <!-- HERO -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-16">
       <!-- Grid background -->
       <div class="absolute inset-0 pointer-events-none">
-        <div class="absolute inset-0 opacity-[0.03] dark:opacity-[0.06]"
-          style="background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 60px 60px;"></div>
-        <!-- Blue glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full opacity-10 dark:opacity-20"
-          style="background: radial-gradient(circle, #2563eb 0%, transparent 70%); filter: blur(80px);"></div>
+        <div class="absolute inset-0 opacity-[0.025] dark:opacity-[0.05]"
+          style="background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 56px 56px;"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full opacity-[0.08] dark:opacity-[0.15]"
+          style="background: radial-gradient(ellipse, #2563eb 0%, transparent 70%); filter: blur(90px);"></div>
       </div>
 
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <!-- Badge -->
-        <div data-aos="fade-down" data-aos-duration="600"
-          class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-8 border"
-          style="border-color: #2563eb33; background: #2563eb11; color: #2563eb;">
-          <span class="w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse"></span>
-          Built for Kenyan Businesses · KRA Compliant
-        </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        <h1 data-aos="fade-up" data-aos-delay="100"
-          class="text-5xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-[1.05] mb-6">
-          <span style="color: var(--text);">Payroll That</span><br/>
-          <span class="gradient-text">Actually Works</span><br/>
-          <span style="color: var(--text);">In Kenya.</span>
-        </h1>
-
-        <p data-aos="fade-up" data-aos-delay="200"
-          class="text-lg sm:text-xl max-w-2xl mx-auto mb-10 leading-relaxed" style="color: var(--text-muted);">
-          Automate PAYE, NSSF, NHIF, and Housing Levy calculations. Generate compliant payslips in seconds.
-          Built by <a href="https://www.816-dynamics.com/" target="_blank" class="text-accent-500 hover:underline font-medium">816 Dynamics</a>
-          specifically for the Kenyan market.
-        </p>
-
-        <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="https://wagebucket.vercel.app/login"
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold bg-accent-600 hover:bg-accent-700 text-white transition-all duration-200 shadow-lg hover:shadow-accent-600/30 hover:shadow-xl hover:-translate-y-0.5">
-            Start Free Today
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-            </svg>
-          </a>
-          <a href="#features"
-            class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-base font-semibold border transition-all duration-200 hover:-translate-y-0.5"
-            style="border-color: var(--border); color: var(--text);">
-            See Features
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
-            </svg>
-          </a>
-        </div>
-
-        <!-- Hero visual: mock payslip terminal -->
-        <div data-aos="zoom-in" data-aos-delay="400" class="mt-16 max-w-2xl mx-auto">
-          <div class="rounded-2xl overflow-hidden border shadow-2xl" style="border-color: var(--border); background-color: var(--card);">
-            <!-- Window bar -->
-            <div class="flex items-center gap-2 px-4 py-3 border-b" style="background-color: var(--bg2); border-color: var(--border);">
-              <div class="flex gap-1.5">
-                <div class="w-3 h-3 rounded-full bg-red-500 opacity-80"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500 opacity-80"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500 opacity-80"></div>
-              </div>
-              <span class="flex-1 text-center text-xs font-mono" style="color: var(--text-muted);">wagebucket — payslip generator</span>
+          <!-- Left: copy -->
+          <div>
+            <div data-aos="fade-right" data-aos-duration="600"
+              class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold mb-8 border"
+              style="border-color: #2563eb33; background: #2563eb0d; color: #2563eb;">
+              <span class="w-1.5 h-1.5 rounded-full bg-accent-500 animate-pulse"></span>
+              Built for Kenya. KRA Compliant.
             </div>
-            <!-- Content -->
-            <div class="p-6 font-mono text-sm text-left">
-              <div class="mb-4">
-                <span class="text-accent-500">→</span>
-                <span class="ml-2" style="color: var(--text);">Processing payroll for <span class="text-accent-400 font-semibold">January 2026</span></span>
+
+            <h1 data-aos="fade-right" data-aos-delay="80"
+              class="text-5xl sm:text-6xl font-extrabold tracking-tight leading-[1.08] mb-6">
+              <span style="color: var(--text);">Payroll that</span><br/>
+              <span class="gradient-text">actually works</span><br/>
+              <span style="color: var(--text);">in Kenya.</span>
+            </h1>
+
+            <p data-aos="fade-right" data-aos-delay="160"
+              class="text-lg leading-relaxed mb-10 max-w-lg" style="color: var(--text-muted);">
+              Automate PAYE, NSSF, NHIF and Housing Levy calculations. Generate compliant payslips in seconds.
+              Built by <a href="https://www.816-dynamics.com/" target="_blank" class="text-accent-500 hover:underline font-semibold">816 Dynamics</a>
+              for the Kenyan market.
+            </p>
+
+            <div data-aos="fade-right" data-aos-delay="240" class="flex flex-col sm:flex-row items-start gap-4">
+              <a href="https://wagebucket.vercel.app/login"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold bg-accent-600 hover:bg-accent-700 text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-accent-600/25 hover:-translate-y-0.5">
+                Get Started Free
+                <i class="mdi mdi-arrow-right text-base"></i>
+              </a>
+              <a href="#features"
+                class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl text-sm font-semibold border transition-all duration-200 hover:-translate-y-0.5"
+                style="border-color: var(--border); color: var(--text);">
+                See Features
+                <i class="mdi mdi-chevron-down text-base"></i>
+              </a>
+            </div>
+
+            <!-- Trust row -->
+            <div data-aos="fade-right" data-aos-delay="320" class="flex items-center gap-5 mt-10 pt-10 border-t" style="border-color: var(--border);">
+              <div class="flex items-center gap-2 text-xs" style="color: var(--text-muted);">
+                <i class="mdi mdi-shield-check-outline text-accent-500 text-base"></i>
+                KRA Compliant
               </div>
-              <div class="space-y-1.5" style="color: var(--text-muted);">
-                <div class="flex justify-between"><span>Gross Pay</span><span class="text-green-400 font-semibold">KES 85,000</span></div>
-                <div class="flex justify-between"><span>PAYE (KRA)</span><span class="text-red-400">- KES 18,450</span></div>
-                <div class="flex justify-between"><span>NSSF (Tier I + II)</span><span class="text-red-400">- KES 2,160</span></div>
-                <div class="flex justify-between"><span>SHIF (NHIF)</span><span class="text-red-400">- KES 2,550</span></div>
-                <div class="flex justify-between"><span>Housing Levy</span><span class="text-red-400">- KES 1,275</span></div>
-                <div class="mt-3 pt-3 border-t flex justify-between font-bold text-base" style="border-color: var(--border);">
-                  <span style="color: var(--text);">Net Pay</span>
-                  <span class="text-accent-400">KES 60,565</span>
-                </div>
+              <div class="flex items-center gap-2 text-xs" style="color: var(--text-muted);">
+                <i class="mdi mdi-lock-outline text-accent-500 text-base"></i>
+                Data Secure
               </div>
-              <div class="mt-4 flex items-center gap-2 text-xs text-green-400">
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                </svg>
-                Payslip generated · KRA compliant · Ready to send
+              <div class="flex items-center gap-2 text-xs" style="color: var(--text-muted);">
+                <i class="mdi mdi-flash text-accent-500 text-base"></i>
+                Run in Seconds
               </div>
             </div>
           </div>
+
+          <!-- Right: payslip card visual -->
+          <div data-aos="fade-left" data-aos-delay="200">
+            <div class="rounded-2xl overflow-hidden border shadow-2xl" style="border-color: var(--card-border); background-color: var(--card);">
+              <!-- Card header -->
+              <div class="px-6 py-5 border-b flex items-center justify-between" style="background-color: var(--bg2); border-color: var(--border);">
+                <div>
+                  <p class="text-xs font-semibold text-accent-600 uppercase tracking-wider mb-0.5">WageBucket</p>
+                  <p class="text-sm font-bold" style="color: var(--text);">January 2026 Payslip</p>
+                </div>
+                <div class="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-green-500/10 text-green-500">
+                  <i class="mdi mdi-check-circle-outline text-sm"></i>
+                  Approved
+                </div>
+              </div>
+
+              <!-- Employee row -->
+              <div class="px-6 py-4 border-b flex items-center gap-3" style="border-color: var(--border);">
+                <div class="w-9 h-9 rounded-full bg-accent-600/10 flex items-center justify-center flex-shrink-0">
+                  <i class="mdi mdi-account text-accent-600 text-lg"></i>
+                </div>
+                <div>
+                  <p class="text-sm font-semibold" style="color: var(--text);">Jane Mwangi</p>
+                  <p class="text-xs" style="color: var(--text-muted);">Senior Developer · EMP-004</p>
+                </div>
+              </div>
+
+              <!-- Breakdown -->
+              <div class="px-6 py-5 space-y-3">
+                <div class="flex justify-between items-center">
+                  <span class="text-sm" style="color: var(--text-muted);">Gross Pay</span>
+                  <span class="text-sm font-semibold text-green-500">KES 85,000</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-accent-500"></div>
+                    <span class="text-sm" style="color: var(--text-muted);">PAYE (KRA)</span>
+                  </div>
+                  <span class="text-sm font-medium" style="color: var(--text);">- KES 18,450</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-violet-500"></div>
+                    <span class="text-sm" style="color: var(--text-muted);">NSSF</span>
+                  </div>
+                  <span class="text-sm font-medium" style="color: var(--text);">- KES 2,160</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                    <span class="text-sm" style="color: var(--text-muted);">SHIF</span>
+                  </div>
+                  <span class="text-sm font-medium" style="color: var(--text);">- KES 2,550</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <div class="flex items-center gap-2">
+                    <div class="w-1.5 h-1.5 rounded-full bg-emerald-500"></div>
+                    <span class="text-sm" style="color: var(--text-muted);">Housing Levy</span>
+                  </div>
+                  <span class="text-sm font-medium" style="color: var(--text);">- KES 1,275</span>
+                </div>
+
+                <div class="pt-4 mt-2 border-t flex justify-between items-center" style="border-color: var(--border);">
+                  <span class="text-sm font-bold" style="color: var(--text);">Net Pay</span>
+                  <span class="text-xl font-extrabold text-accent-600">KES 60,565</span>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="px-6 py-4 border-t flex items-center justify-between" style="border-color: var(--border); background-color: var(--bg2);">
+                <span class="text-xs" style="color: var(--text-muted);">Generated by WageBucket</span>
+                <div class="flex items-center gap-1.5 text-xs text-accent-500 font-medium">
+                  <i class="mdi mdi-download-outline text-sm"></i>
+                  Download PDF
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- ── COMPLIANCE BANNER ── -->
-    <section class="py-6 overflow-hidden border-y" style="background-color: var(--bg2); border-color: var(--border);" id="compliance">
-      <div class="flex gap-12 animate-scroll-x whitespace-nowrap">
-        <div v-for="i in 3" :key="i" class="flex items-center gap-12 flex-shrink-0">
+    <!-- COMPLIANCE TICKER -->
+    <section class="py-5 overflow-hidden border-y" style="background-color: var(--bg2); border-color: var(--border);" id="compliance">
+      <div class="flex animate-scroll-x whitespace-nowrap">
+        <div v-for="i in 4" :key="i" class="flex items-center flex-shrink-0">
           <CompliancePill v-for="item in complianceItems" :key="item.label + i" :icon="item.icon" :label="item.label" />
         </div>
       </div>
     </section>
 
-    <!-- ── FEATURES ── -->
-    <section id="features" class="py-24 px-4 sm:px-6 lg:px-8">
+    <!-- FEATURES -->
+    <section id="features" class="py-28 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <p data-aos="fade-up" class="text-sm font-semibold text-accent-600 uppercase tracking-widest mb-3">Features</p>
-          <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl sm:text-5xl font-black tracking-tight mb-4" style="color: var(--text);">
+        <div class="text-center mb-20">
+          <p data-aos="fade-up" class="text-xs font-bold text-accent-600 uppercase tracking-widest mb-3">Features</p>
+          <h2 data-aos="fade-up" data-aos-delay="80" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-5" style="color: var(--text);">
             Everything you need to<br/><span class="gradient-text">run payroll in Kenya</span>
           </h2>
-          <p data-aos="fade-up" data-aos-delay="200" class="text-lg max-w-xl mx-auto" style="color: var(--text-muted);">
-            From employee onboarding to compliant payslips — WageBucket handles every step of the Kenyan payroll process.
+          <p data-aos="fade-up" data-aos-delay="160" class="text-base max-w-xl mx-auto leading-relaxed" style="color: var(--text-muted);">
+            From employee onboarding to compliant payslips, WageBucket handles every step of the Kenyan payroll process.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           <FeatureCard
             v-for="(feature, i) in features"
             :key="feature.title"
             :feature="feature"
-            :data-aos="i % 2 === 0 ? 'fade-right' : 'fade-left'"
-            :data-aos-delay="String((i % 3) * 100)"
+            data-aos="fade-up"
+            :data-aos-delay="String((i % 3) * 80)"
           />
         </div>
       </div>
     </section>
 
-    <!-- ── HOW IT WORKS ── -->
-    <section id="how-it-works" class="py-24 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg2);">
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="py-28 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg2);">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <p data-aos="fade-up" class="text-sm font-semibold text-accent-600 uppercase tracking-widest mb-3">How It Works</p>
-          <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl sm:text-5xl font-black tracking-tight" style="color: var(--text);">
-            Payroll in <span class="gradient-text">5 simple steps</span>
+        <div class="text-center mb-20">
+          <p data-aos="fade-up" class="text-xs font-bold text-accent-600 uppercase tracking-widest mb-3">How It Works</p>
+          <h2 data-aos="fade-up" data-aos-delay="80" class="text-4xl sm:text-5xl font-extrabold tracking-tight" style="color: var(--text);">
+            Payroll in <span class="gradient-text">five simple steps</span>
           </h2>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-          <StepCard v-for="(step, i) in steps" :key="step.title" :step="step" :index="i" data-aos="fade-up" :data-aos-delay="String(i * 80)" />
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+          <StepCard
+            v-for="(step, i) in steps"
+            :key="step.title"
+            :step="step"
+            :index="i"
+            data-aos="fade-up"
+            :data-aos-delay="String(i * 80)"
+          />
         </div>
       </div>
     </section>
 
-    <!-- ── STATUTORY DEDUCTIONS ── -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8">
+    <!-- STATUTORY DEDUCTIONS -->
+    <section class="py-28 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
-            <p data-aos="fade-right" class="text-sm font-semibold text-accent-600 uppercase tracking-widest mb-3">KRA Compliance</p>
-            <h2 data-aos="fade-right" data-aos-delay="100" class="text-4xl sm:text-5xl font-black tracking-tight mb-6" style="color: var(--text);">
-              Every Kenyan deduction,<br/><span class="gradient-text">calculated correctly.</span>
+            <p data-aos="fade-right" class="text-xs font-bold text-accent-600 uppercase tracking-widest mb-3">KRA Compliance</p>
+            <h2 data-aos="fade-right" data-aos-delay="80" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6" style="color: var(--text);">
+              Every Kenyan deduction<br/><span class="gradient-text">calculated correctly.</span>
             </h2>
-            <p data-aos="fade-right" data-aos-delay="200" class="text-base leading-relaxed mb-8" style="color: var(--text-muted);">
-              WageBucket automatically applies the latest KRA tax bands, NSSF tiers, SHIF/NHIF rates, and the Affordable Housing Levy — so you never have to worry about compliance again.
+            <p data-aos="fade-right" data-aos-delay="160" class="text-base leading-relaxed mb-10" style="color: var(--text-muted);">
+              WageBucket automatically applies the latest KRA tax bands, NSSF tiers, SHIF rates and the Affordable Housing Levy
+              so you never have to worry about compliance again.
             </p>
-            <ul data-aos="fade-right" data-aos-delay="300" class="space-y-4">
+            <ul data-aos="fade-right" data-aos-delay="240" class="space-y-4">
               <li v-for="item in complianceDetails" :key="item" class="flex items-start gap-3">
                 <div class="mt-0.5 w-5 h-5 rounded-full bg-accent-600/10 flex items-center justify-center flex-shrink-0">
-                  <svg class="w-3 h-3 text-accent-500" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/>
-                  </svg>
+                  <i class="mdi mdi-check text-accent-600 text-xs"></i>
                 </div>
-                <span class="text-sm" style="color: var(--text-muted);">{{ item }}</span>
+                <span class="text-sm leading-relaxed" style="color: var(--text-muted);">{{ item }}</span>
               </li>
             </ul>
           </div>
 
-          <!-- Deductions card grid -->
-          <div data-aos="fade-left" data-aos-delay="100" class="grid grid-cols-2 gap-4">
+          <div data-aos="fade-left" data-aos-delay="120" class="grid grid-cols-2 gap-4">
             <DeductionCard v-for="d in deductions" :key="d.label" :deduction="d" />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ── STATS ── -->
-    <section class="py-16 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg2);">
+    <!-- STATS -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg2);">
       <div class="max-w-7xl mx-auto">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-          <StatCard v-for="(stat, i) in stats" :key="stat.label" :stat="stat" data-aos="zoom-in" :data-aos-delay="String(i * 100)" />
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+          <StatCard
+            v-for="(stat, i) in stats"
+            :key="stat.label"
+            :stat="stat"
+            data-aos="zoom-in"
+            :data-aos-delay="String(i * 80)"
+          />
         </div>
       </div>
     </section>
 
-    <!-- ── PRICING ── -->
-    <section id="pricing" class="py-24 px-4 sm:px-6 lg:px-8">
+    <!-- PRICING -->
+    <section id="pricing" class="py-28 px-4 sm:px-6 lg:px-8">
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-          <p data-aos="fade-up" class="text-sm font-semibold text-accent-600 uppercase tracking-widest mb-3">Pricing</p>
-          <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl sm:text-5xl font-black tracking-tight mb-4" style="color: var(--text);">
+        <div class="text-center mb-20">
+          <p data-aos="fade-up" class="text-xs font-bold text-accent-600 uppercase tracking-widest mb-3">Pricing</p>
+          <h2 data-aos="fade-up" data-aos-delay="80" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-5" style="color: var(--text);">
             Simple, transparent<br/><span class="gradient-text">pricing</span>
           </h2>
-          <p data-aos="fade-up" data-aos-delay="200" class="text-lg" style="color: var(--text-muted);">Start free. Scale as you grow.</p>
+          <p data-aos="fade-up" data-aos-delay="160" class="text-base" style="color: var(--text-muted);">Start free. Scale as you grow.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          <PricingCard v-for="(plan, i) in plans" :key="plan.name" :plan="plan" data-aos="fade-up" :data-aos-delay="String(i * 100)" />
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          <PricingCard
+            v-for="(plan, i) in plans"
+            :key="plan.name"
+            :plan="plan"
+            data-aos="fade-up"
+            :data-aos-delay="String(i * 80)"
+          />
         </div>
       </div>
     </section>
 
-    <!-- ── CTA ── -->
-    <section class="py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      <div class="max-w-4xl mx-auto text-center relative">
-        <div class="absolute inset-0 -z-10 pointer-events-none">
-          <div class="absolute inset-0 rounded-3xl opacity-10 dark:opacity-20" style="background: radial-gradient(ellipse at center, #2563eb 0%, transparent 70%);"></div>
-        </div>
+    <!-- CTA -->
+    <section class="py-28 px-4 sm:px-6 lg:px-8" style="background-color: var(--bg2);">
+      <div class="max-w-3xl mx-auto text-center">
         <div class="rounded-3xl border p-12 sm:p-16" style="background-color: var(--card); border-color: var(--card-border);">
-          <p data-aos="fade-up" class="text-sm font-semibold text-accent-600 uppercase tracking-widest mb-4">Get Started Today</p>
-          <h2 data-aos="fade-up" data-aos-delay="100" class="text-4xl sm:text-5xl font-black tracking-tight mb-6" style="color: var(--text);">
+          <div data-aos="fade-up" class="w-14 h-14 rounded-2xl bg-accent-600/10 flex items-center justify-center mx-auto mb-6">
+            <i class="mdi mdi-rocket-launch-outline text-accent-600 text-2xl"></i>
+          </div>
+          <p data-aos="fade-up" class="text-xs font-bold text-accent-600 uppercase tracking-widest mb-4">Get Started Today</p>
+          <h2 data-aos="fade-up" data-aos-delay="80" class="text-4xl sm:text-5xl font-extrabold tracking-tight mb-6" style="color: var(--text);">
             Run your first payroll<br/><span class="gradient-text">in under 10 minutes.</span>
           </h2>
-          <p data-aos="fade-up" data-aos-delay="200" class="text-lg mb-10" style="color: var(--text-muted);">
-            Join Kenyan businesses already using WageBucket to automate their payroll, stay compliant with KRA, and pay their teams on time — every time.
+          <p data-aos="fade-up" data-aos-delay="160" class="text-base mb-10 leading-relaxed" style="color: var(--text-muted);">
+            Join Kenyan businesses already using WageBucket to automate payroll, stay compliant with KRA and pay their teams on time, every time.
           </p>
-          <div data-aos="fade-up" data-aos-delay="300" class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <div data-aos="fade-up" data-aos-delay="240" class="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a href="https://wagebucket.vercel.app/login"
-              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-bold bg-accent-600 hover:bg-accent-700 text-white transition-all duration-200 shadow-lg hover:shadow-accent-600/30 hover:shadow-xl hover:-translate-y-0.5">
+              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-bold bg-accent-600 hover:bg-accent-700 text-white transition-all duration-200 shadow-lg hover:shadow-xl hover:shadow-accent-600/25 hover:-translate-y-0.5">
               Create Free Account
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
-              </svg>
+              <i class="mdi mdi-arrow-right text-base"></i>
             </a>
             <a href="https://www.816-dynamics.com/" target="_blank" rel="noopener"
-              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold border transition-all duration-200 hover:-translate-y-0.5"
+              class="inline-flex items-center gap-2 px-8 py-4 rounded-xl text-sm font-semibold border transition-all duration-200 hover:-translate-y-0.5"
               style="border-color: var(--border); color: var(--text-muted);">
+              <i class="mdi mdi-open-in-new text-sm"></i>
               Learn about 816 Dynamics
             </a>
           </div>
         </div>
       </div>
     </section>
+
   </div>
 </template>
 
 <script setup lang="ts">
 useSeoMeta({
-  title: 'WageBucket – Smart Payroll Software for Kenyan Businesses',
-  description: 'Automate PAYE, NSSF, NHIF, and Housing Levy payroll in Kenya. KRA-compliant payslips in seconds. Built by 816 Dynamics for Kenyan SMEs.',
-  ogTitle: 'WageBucket – Kenya Payroll Software',
+  title: 'WageBucket - Smart Payroll Software for Kenyan Businesses',
+  description: 'Automate PAYE, NSSF, NHIF and Housing Levy payroll in Kenya. KRA-compliant payslips in seconds. Built by 816 Dynamics for Kenyan SMEs.',
+  ogTitle: 'WageBucket - Kenya Payroll Software',
   ogDescription: 'Run compliant Kenyan payroll in minutes. PAYE, NSSF, NHIF, Housing Levy automation built for Kenyan businesses.',
   twitterCard: 'summary_large_image',
 })
 
 const complianceItems = [
-  { icon: '🇰🇪', label: 'KRA PAYE Compliant' },
-  { icon: '✅', label: 'NSSF Tier I & II' },
-  { icon: '🏥', label: 'SHIF / NHIF' },
-  { icon: '🏠', label: 'Housing Levy (AHL)' },
-  { icon: '📋', label: 'P9 Forms' },
-  { icon: '💼', label: 'Multi-Company' },
-  { icon: '🔒', label: 'Data Secure' },
-  { icon: '⚡', label: 'Instant Payslips' },
+  { icon: 'mdi-calculator-variant-outline', label: 'KRA PAYE Compliant' },
+  { icon: 'mdi-shield-account-outline', label: 'NSSF Tier I and II' },
+  { icon: 'mdi-hospital-box-outline', label: 'SHIF / NHIF' },
+  { icon: 'mdi-home-city-outline', label: 'Housing Levy (AHL)' },
+  { icon: 'mdi-file-document-outline', label: 'P9 Forms' },
+  { icon: 'mdi-office-building-outline', label: 'Multi-Company' },
+  { icon: 'mdi-lock-outline', label: 'Data Secure' },
+  { icon: 'mdi-lightning-bolt-outline', label: 'Instant Payslips' },
 ]
 
 const features = [
   {
-    icon: '🧮',
+    icon: 'mdi-calculator-variant-outline',
     title: 'PAYE Auto-Calculation',
     description: 'Progressive tax bands applied automatically using the latest KRA PAYE rates. Personal relief deducted correctly every month.',
     accent: true,
   },
   {
-    icon: '🏛️',
+    icon: 'mdi-shield-account-outline',
     title: 'NSSF Tier Compliance',
-    description: 'New NSSF Act 2013 tiers handled automatically — Tier I (lower earnings limit) and Tier II (upper earnings limit) split correctly.',
+    description: 'New NSSF Act 2013 tiers handled automatically. Tier I and Tier II split calculated correctly for every employee.',
   },
   {
-    icon: '🏥',
+    icon: 'mdi-hospital-box-outline',
     title: 'SHIF / NHIF Deductions',
-    description: 'Social Health Insurance Fund deductions calculated per the current income-based rates. Always up to date.',
+    description: 'Social Health Insurance Fund deductions calculated per the current income-based rates, always up to date.',
   },
   {
-    icon: '🏠',
+    icon: 'mdi-home-city-outline',
     title: 'Affordable Housing Levy',
     description: '1.5% Housing Levy deducted and matched by employer. Automatically included in every payslip as required by law.',
   },
   {
-    icon: '📄',
+    icon: 'mdi-file-document-outline',
     title: 'Instant Payslips',
     description: 'Generate professional, branded payslips in PDF format. Email directly to employees with one click.',
   },
   {
-    icon: '👥',
+    icon: 'mdi-account-group-outline',
     title: 'Employee Management',
-    description: 'Manage your full workforce — departments, positions, contract types, and statutory IDs — all in one place.',
+    description: 'Manage your full workforce including departments, positions, contract types and statutory IDs all in one place.',
   },
   {
-    icon: '📊',
+    icon: 'mdi-chart-bar',
     title: 'Payroll Reports',
-    description: 'P9 annual returns, monthly statutory summaries, and custom reports ready for your accountant or the KRA.',
+    description: 'P9 annual returns, monthly statutory summaries and custom reports ready for your accountant or the KRA.',
   },
   {
-    icon: '⚙️',
+    icon: 'mdi-tune-variant',
     title: 'Custom Allowances',
-    description: 'Add housing, transport, medical, and other allowances. Configure which are taxable and which are exempt.',
+    description: 'Add housing, transport, medical and other allowances. Configure which are taxable and which are exempt.',
   },
   {
-    icon: '🔐',
+    icon: 'mdi-lock-outline',
     title: 'Role-Based Access',
-    description: 'HR managers, accountants, and admins each see only what they need. Audit logs track every change.',
+    description: 'HR managers, accountants and admins each see only what they need. Audit logs track every change.',
   },
 ]
 
 const steps = [
-  { number: '01', title: 'Add Employees', desc: 'Import or create employee profiles with salary and statutory details.' },
-  { number: '02', title: 'Set Up Schemes', desc: 'Configure PAYE, NSSF, NHIF, and custom deduction rules once.' },
-  { number: '03', title: 'Enter Pay Inputs', desc: 'Add allowances, overtime, or leave adjustments for the period.' },
-  { number: '04', title: 'Run Calculation', desc: 'One click runs the full payroll engine for all employees.' },
-  { number: '05', title: 'Approve & Pay', desc: 'Review payslips, approve, and mark as paid. Done.' },
+  { number: '01', title: 'Add Employees', desc: 'Create employee profiles with salary and statutory details.', icon: 'mdi-account-plus-outline' },
+  { number: '02', title: 'Set Up Schemes', desc: 'Configure PAYE, NSSF, NHIF and custom deduction rules once.', icon: 'mdi-cog-outline' },
+  { number: '03', title: 'Enter Pay Inputs', desc: 'Add allowances, overtime or leave adjustments for the period.', icon: 'mdi-pencil-outline' },
+  { number: '04', title: 'Run Calculation', desc: 'One click runs the full payroll engine for all employees.', icon: 'mdi-play-circle-outline' },
+  { number: '05', title: 'Approve and Pay', desc: 'Review payslips, approve and mark as paid.', icon: 'mdi-check-circle-outline' },
 ]
 
 const complianceDetails = [
-  'PAYE calculated using current 2024/2025 KRA tax bands and personal relief (KES 2,400/month)',
-  'NSSF contributions split into Tier I (6% of lower earnings limit) and Tier II (6% of balance)',
-  'SHIF/NHIF deducted based on the income-based sliding scale (effective October 2024)',
-  'Affordable Housing Levy — 1.5% employee deduction + 1.5% employer contribution',
-  'Tax-exempt allowances (e.g. meals up to KES 4,000, mileage at KRA rates) handled correctly',
+  'PAYE calculated using current KRA tax bands and personal relief of KES 2,400 per month',
+  'NSSF contributions split into Tier I at 6% of lower earnings limit and Tier II at 6% of the balance',
+  'SHIF / NHIF deducted based on the income-based sliding scale effective October 2024',
+  'Affordable Housing Levy at 1.5% employee deduction plus 1.5% employer contribution',
+  'Tax-exempt allowances such as meals up to KES 4,000 and mileage at KRA rates handled correctly',
   'P9 annual tax deduction cards generated automatically for every employee',
 ]
 
 const deductions = [
-  { label: 'PAYE', subtitle: 'Income Tax', color: '#2563eb', bg: '#eff6ff', darkBg: '#1e3a8a20', example: '30% top rate' },
-  { label: 'NSSF', subtitle: 'Pension Fund', color: '#16a34a', bg: '#f0fdf4', darkBg: '#14532d20', example: 'Tier I & II' },
-  { label: 'SHIF', subtitle: 'Health Insurance', color: '#d97706', bg: '#fffbeb', darkBg: '#78350f20', example: '2.75% gross' },
-  { label: 'AHL', subtitle: 'Housing Levy', color: '#7c3aed', bg: '#f5f3ff', darkBg: '#4c1d9520', example: '1.5% gross' },
+  { label: 'PAYE', subtitle: 'Income Tax', icon: 'mdi-calculator-variant-outline', color: '#2563eb', bg: '#eff6ff', darkBg: '#1e3a8a20', example: '30% top rate' },
+  { label: 'NSSF', subtitle: 'Pension Fund', icon: 'mdi-shield-account-outline', color: '#7c3aed', bg: '#f5f3ff', darkBg: '#4c1d9520', example: 'Tier I and II' },
+  { label: 'SHIF', subtitle: 'Health Insurance', icon: 'mdi-hospital-box-outline', color: '#d97706', bg: '#fffbeb', darkBg: '#78350f20', example: '2.75% gross' },
+  { label: 'AHL', subtitle: 'Housing Levy', icon: 'mdi-home-city-outline', color: '#16a34a', bg: '#f0fdf4', darkBg: '#14532d20', example: '1.5% gross' },
 ]
 
 const stats = [
   { value: '100%', label: 'KRA Compliant' },
-  { value: '< 10s', label: 'Payroll Run Time' },
+  { value: '10s', label: 'Avg Payroll Run' },
   { value: '4+', label: 'Statutory Schemes' },
-  { value: '816', label: 'Dynamics Built' },
+  { value: 'KE', label: 'Built for Kenya' },
 ]
 
 const plans = [
